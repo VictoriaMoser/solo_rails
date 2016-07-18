@@ -1,3 +1,4 @@
 class Review < ApplicationRecord
-  belons_to :user
+  belongs_to :user
+  belongs_to :movie
 end
