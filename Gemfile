@@ -36,3 +36,5 @@ gem 'devise', '~> 4.2'
 gem 'paperclip', '~> 5.0'
 #bootstrap for styling
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+# add the ability to search
+gem 'searchkick', '~> 0.8.7'
