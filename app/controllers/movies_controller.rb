@@ -2,9 +2,33 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
+
+  # create_table "movies", force: :cascade do |t|
+  #   t.string   "title"
+  #   t.text     "description"
+  #   t.string   "movie_length"
+  #   t.string   "director"
+  #   t.string   "rating"
+  #   t.datetime "created_at",         null: false
+  #   t.datetime "updated_at",         null: false
+  #   t.integer  "user_id"
+  #   t.string   "image_file_name"
+  #   t.string   "image_content_type"
+  #   t.integer  "image_file_size"
+  #   t.datetime "image_updated_at"
+  # end
   def search
     if params[:search].present?
-      @movies = Movie.search(params[:search])
+      @movies = Movie.search(params[:search], limit: 1000)
+      if @movies.empty?
+        url = "http://www.omdbapi.com/?t=#{params[:search]}"
+        response = HTTParty.get(url)
+        Movie.create!({
+          title: response['Title'],
+          image_file_name: response['Poster'],
+          rating: response['Rated']
+          })
+      end
     else
       @movies = Movie.all
     end

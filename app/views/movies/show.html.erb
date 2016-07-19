@@ -35,10 +35,8 @@
       </div>
       <div class="col-md-7 col-md-offset-1">
         <h1 class="review_title"><%= @movie.title %></h1>
-        <p><%= @movie.description %></p>
-
-        <% if @reviews.blank? %>
-          <h3>Would you like to be the first one to leave a review?</h3>
+          <% if @reviews.blank? %>
+        <h3>Would you like to be the first one to leave a review?</h3>
           <%= link_to "Write Review", new_movie_review_path(@movie), class: "btn btn-danger" %>
         <% else %>
           <% @reviews.each do |review| %>
