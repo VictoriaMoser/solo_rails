@@ -32,8 +32,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #to create users
 gem 'devise', '~> 4.2'
-#easy upload managment for active record
-gem 'paperclip', '~> 5.0'
+# #easy upload managment for active record
+# gem 'paperclip', '~> 5.0'
 #bootstrap for styling
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # add the ability to search

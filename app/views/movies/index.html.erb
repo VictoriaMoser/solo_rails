@@ -6,15 +6,13 @@
   </div>
 <% end %>
 
-<div class="row">
+<div class="col-md-12">
     <% @movies.each do |movie| %>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+  <div class="col-sm-6 col-md-3 image">
+      <div class="thumbnail thumb">
         <% if movie.picture %>
-          <%= link_to (image_tag movie.picture, class: 'image'), movie %>
-        <% else %>
-          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
-        <% end %>
+          <%= link_to (image_tag movie.picture, class: 'img-responsive '), movie %>
+          <% end %>
       </div>
       <div>
         <h3><%= movie.title %></h3>

@@ -31,3 +31,12 @@
   padding-bottom: 8px;
   }
 }
+
+.image:nth-child(4n + 1) {
+  clear: left;
+  }
+
+  .thumb {
+    width:200px;
+    height: 300px;
+  }
