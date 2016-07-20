@@ -10,8 +10,26 @@
     <% @movies.each do |movie| %>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <%=link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+        <% if movie.picture %>
+          <%= link_to (image_tag movie.picture, class: 'image'), movie %>
+        <% else %>
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+        <% end %>
+      </div>
+      <div>
+        <h3><%= movie.title %></h3>
       </div>
     </div>
   <%end%>
 </div>
+
+
+<script>
+    $('.star-rating').raty({
+      path: '/assets/',
+      readOnly: true,
+      score: function() {
+            return $(this).attr('data-score');
+    }
+  });
+</script>
