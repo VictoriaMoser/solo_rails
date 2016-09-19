@@ -16,27 +16,45 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- body {
+ .navbar {
    background: #17D7D7;
  }
 
-.review_title {
-  margin: 0 0 20px 0;
+.navbar-toggle {
+   color: #fcfefe;
+ }
+
+ .btn-color {
+   background-color: #17D7D7;
+   border-color: #17D7D7;
+ }
+
+ .btn-color:hover {
+   background-color: rgba(#990afc, 0.64);
+   border-color: rgba(#990afc, 0.64);
+ }
+
+ .review_title {
+   margin: 0 0 20px 0;
+ }
+
+ .reviews {
+   padding: 15px 0;
+   border-bottom: 1px solid #EAEAEA;
+   .star-rating {
+     padding-bottom: 8px;
+   }
+ }
+
+ .image:nth-child(4n + 1) {
+   clear: left;
+ }
+
+ .thumb {
+   width:200px;
+   height: 300px;
+ }
+
+.center-text {
+  text-align: center;
 }
-
-.reviews {
-  padding: 15px 0;
-  border-bottom: 1px solid #EAEAEA;
-  .star-rating {
-  padding-bottom: 8px;
-  }
-}
-
-.image:nth-child(4n + 1) {
-  clear: left;
-  }
-
-  .thumb {
-    width:200px;
-    height: 300px;
-  }

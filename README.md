@@ -1,24 +1,9 @@
-# README
+This is a Movie Review Application.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- You need to create an account to be able to add any movies to the Application.
 
-Things you may want to cover:
+- The movies come from the OMDB API.
 
-* Ruby version
+- Used the gem searchkick in order to retrieve movies name, description, year, and picture from the API.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Styled with SASS 

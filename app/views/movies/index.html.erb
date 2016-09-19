@@ -1,8 +1,8 @@
 <% if !user_signed_in? %>
   <div class="jumbotron">
-    <h1> Reviews of Your Favorite Movies</h1>
-    <p>Hashtag hoodie mumblecore selfies. Authentic keffiyeh leggings Kickstarter, narwhal jean shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
-    <p><%= link_to "Sign Up To Write A Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+    <h1 class="center-text"> Movies You Love </h1>
+    <p class="center-text"> Reviews of your favorite movies and what others are saying about them! </p>
+    <p class="center-text"><%= link_to "Sign Up To Write A Review", new_user_registration_path, class: "btn btn-primary btn-lg btn-color" %></p>
   </div>
 <% end %>
 
@@ -11,7 +11,7 @@
   <div class="col-sm-6 col-md-3 image">
       <div class="thumbnail thumb">
         <% if movie.picture %>
-          <%= link_to (image_tag movie.picture, class: 'img-responsive '), movie %>
+          <%= link_to (image_tag movie.picture, class: 'img-responsive'), movie %>
           <% end %>
       </div>
       <div>
